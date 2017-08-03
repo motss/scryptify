@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "eslint:recommended"
+  ],
+  "env": {
+    "node": true
+  },
+  "plugins": [
+  ],
+  "rules": {
+    "no-console": [
+      "error",
+      { "allow": [ "info", "log", "error", "warn" ] }
+    ]
+  }
+}
