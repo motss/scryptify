@@ -4,8 +4,7 @@
   "description": "Stronger encryption and descryption in Node.js",
   "keywords": [
     "scryptify",
-    "npm",
-    "zumata"
+    "npm"
   ],
   "homepage": "https://github.com/motss/scryptify",
   "license": "MIT",
