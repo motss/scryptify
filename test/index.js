@@ -35,7 +35,7 @@ test('decryption works', async (t) => {
 
 test('encryption always produces unique output', async (t) => {
   const encryptedSet = new Set();
-  const len = 1e6;
+  const len = 1e4;
 
   await Array(len).fill(0).map(async () => {
     await encryptedSet.add(await encrypt(rawData, secret));
@@ -46,7 +46,7 @@ test('encryption always produces unique output', async (t) => {
 
 test('decryption always works on unique encrypted sets from the same raw data', async (t) => {
   const encryptedSet = new Set();
-  const len = 1e3;
+  const len = 1e4;
 
   await Array(len).fill(0).map(async () => {
     await encryptedSet.add(await encrypt(rawData, secret));
