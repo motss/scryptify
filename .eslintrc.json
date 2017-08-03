@@ -1,10 +1,7 @@
 {
   "extends": [
-    "eslint:recommended"
+    "zumata"
   ],
-  "env": {
-    "node": true
-  },
   "plugins": [
   ],
   "rules": {
