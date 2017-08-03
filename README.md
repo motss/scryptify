@@ -1,5 +1,7 @@
 # scryptify
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/motss/scryptify.svg)](https://greenkeeper.io/)
+
 > A stronger encryption and descryption in Node.js
 
 A stronger encryption and description in Node.js based on implementation that can be found here [Stronger Encryption and Decryption in Node.js | Vance Lucas](http://vancelucas.com/blog/stronger-encryption-and-decryption-in-node-js/).
