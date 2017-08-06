@@ -44,7 +44,7 @@ const encrypted = Scryptify.encrypt('5ome_rand0m_m3ss4g3', secret);
 const encrypted1 = Scryptify.encrypt('5ome_rand0m_m3ss4g3', secret);
 const encrypted2 = Scryptify.encrypt('5ome_rand0m_m3ss4g3', secret);
 
-/** The output will always unique given the exact same raw data and salt. */
+/** The output will always be unique given the exact same raw data and salt. */
 console.log({
   encrypted, /** 7f087dcd618d825cfdb56884b97acd3a:50728aaa04bf8ae4ba434806e62d4e917cf4d1632716f013173813e812429f52 */
   encrypted1, /** e472c45e697be97ee6fd2eac19900b00:c68590eef8f7d86c6b4486c387f31aebf5004aa14b01b925d3219a638490add9 */
@@ -63,6 +63,10 @@ console.log({
   decrypted2, /** 5ome_rand0m_m3ss4g3 */
 });
 ```
+
+## Demo
+
+[Simple Demo on Runkit](https://runkit.com/motss/scryptify-demo)
 
 ## Throughput
 
