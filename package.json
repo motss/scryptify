@@ -48,7 +48,7 @@
     "codecov": "^2.2.0",
     "coveralls": "^2.13.1",
     "eslint": "^4.1.0",
-    "eslint-config-zumata": "^0.4.0",
+    "eslint-config-zumata": "^0.6.0",
     "nsp": "^2.6.3",
     "nyc": "^11.1.0",
     "randomstring": "^1.1.5",
