@@ -46,7 +46,7 @@
     "babel-preset-babili": "^0.1.3",
     "babel-preset-env": "^1.5.2",
     "codecov": "^2.2.0",
-    "coveralls": "^2.13.1",
+    "coveralls": "^3.0.0",
     "eslint": "^4.1.0",
     "eslint-config-zumata": "^0.4.0",
     "nsp": "^2.6.3",
