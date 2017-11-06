@@ -49,7 +49,7 @@
     "coveralls": "^2.13.1",
     "eslint": "^4.1.0",
     "eslint-config-zumata": "^0.4.0",
-    "nsp": "^2.6.3",
+    "nsp": "^3.0.0",
     "nyc": "^11.1.0",
     "randomstring": "^1.1.5",
     "snyk": "^1.34.4"
