@@ -2,7 +2,7 @@
 
 [![NPM][nodei-image]][nodei-url]
 
-> A stronger encryption and descryption in Node.js
+> A stronger encryption and decryption in Node.js
 
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
