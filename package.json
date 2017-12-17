@@ -1,7 +1,7 @@
 {
   "name": "scryptify",
   "version": "0.1.2",
-  "description": "Stronger encryption and descryption in Node.js",
+  "description": "Stronger encryption and decryption in Node.js",
   "keywords": [
     "cryptify",
     "crypto",
@@ -15,58 +15,56 @@
   ],
   "homepage": "https://github.com/motss/scryptify",
   "license": "MIT",
-  "author": "motss <wes.ngrongsen@gmail.com>",
+  "author": "Rong Sen Ng <wes.ngrongsen@gmail.com> (https://github.com/motss)",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:motss/scryptify.git"
   },
   "scripts": {
-    "build": "npm run lint && sh ./run-build.sh production",
-    "build:clean": "sh ./run-build.sh clean production",
-    "build:test": "rm -rf dist && babel src/ -d dist/",
-    "check": "npm run lint && npm run nsp && npm run snyk",
-    "codecov": "nyc report --reporter=lcov > coverage.lcov && codecov",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "lint": "eslint ./src",
+    "build": "npm run ts && cross-env NODE_ENV=production gulp build && rm -rf gulpfile.js",
+    "build:debug": "npm run ts && gulp build && rm -rf gulpfile.js",
+    "check": "npm run lint && npm run nsp",
+    "gulp": "npm run ts && gulp",
+    "lint": "tslint --project tsconfig.json --config tslint.json",
+    "lint:fix": "tslint -p . -c tslint.json --fix",
     "nsp": "nsp check",
-    "nyc": "nyc report --reporter=lcov",
-    "prepublish": "npm run lint && npm run check && npm run build",
-    "snyk": "snyk test",
-    "test": "nyc ava && npm run nyc",
-    "watch": "babel -w src/ -d dist/"
+    "prepublishOnly": "npm run check && npm run build",
+    "test": "ava ./test",
+    "ts": "tsc gulpfile.ts"
   },
   "dependencies": {},
   "devDependencies": {
-    "ava": "^0.21.0",
-    "babel-cli": "^6.24.1",
+    "@std/esm": "^0.18.0",
+    "@types/node": "^8.5.1",
+    "ava": "^0.24.0",
+    "babel-cli": "^6.26.0",
     "babel-plugin-transform-function-bind": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-polyfill": "^6.23.0",
-    "babel-preset-babili": "^0.1.3",
-    "babel-preset-env": "^1.5.2",
-    "codecov": "^2.2.0",
-    "coveralls": "^2.13.1",
-    "eslint": "^4.1.0",
-    "eslint-config-zumata": "^0.4.0",
-    "nsp": "^2.6.3",
-    "nyc": "^11.1.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-minify": "^0.2.0",
+    "cross-env": "^5.1.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-sequence": "^0.4.6",
+    "gulp-typescript": "^3.2.3",
+    "nsp": "^3.1.0",
     "randomstring": "^1.1.5",
-    "snyk": "^1.34.4"
+    "tslint": "^5.8.0",
+    "tslint-config-airbnb": "^5.4.2",
+    "tslint-config-prettier": "^1.6.0",
+    "typescript": "^2.6.2"
   },
   "engines": {
-    "node": ">= 6.9.1",
-    "npm": ">= 3.10.8"
+    "node": ">= 8.9.0",
+    "npm": ">= 5.5.1"
   },
-  "nyc": {
-    "exclude": [
-      "{,**}/!(index.js)",
-      "test",
-      "test{,-*}.js",
-      "**/*.test.js",
-      "**/__tests__/**",
-      "**/node_modules/**"
+  "@std/esm": "cjs",
+  "ava": {
+    "require": [
+      "@std/esm"
     ]
-  },
-  "snyk": true
+  }
 }
