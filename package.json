@@ -29,7 +29,6 @@
     "lint": "tslint --project tsconfig.json --config tslint.json",
     "lint:fix": "tslint -p . -c tslint.json --fix",
     "nsp": "nsp check",
-    "prepublish": "npm run lint && npm run check && npm run build",
     "prepublishOnly": "npm run check && npm run build",
     "test": "ava ./test",
     "ts": "tsc gulpfile.ts"
