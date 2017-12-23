@@ -1,6 +1,6 @@
 {
   "name": "scryptify",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Stronger encryption and decryption in Node.js",
   "keywords": [
     "cryptify",
@@ -16,7 +16,7 @@
   "homepage": "https://github.com/motss/scryptify",
   "license": "MIT",
   "author": "Rong Sen Ng <wes.ngrongsen@gmail.com> (https://github.com/motss)",
-  "main": "dist/index.js",
+  "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:motss/scryptify.git"
@@ -31,7 +31,7 @@
     "nsp": "nsp check",
     "prepublishOnly": "npm run check && npm run build",
     "test": "ava ./test",
-    "ts": "tsc gulpfile.ts"
+    "ts": "tsc --target esnext --lib esnext --module commonjs gulpfile.ts"
   },
   "dependencies": {},
   "devDependencies": {
