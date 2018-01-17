@@ -1,12 +1,11 @@
 /** Import project dependencies */
 import test from 'ava';
-import randomstring from 'randomstring';
 
 /** Import src/ */
 import scryptify from '../';
 
 /** Setting up */
-const secret = randomstring.generate(32);
+const secret = '94qkPWQRouw5ouD9mVG2SHoDud3Mf8zw';
 const encrypt = scryptify.encrypt;
 const decrypt = scryptify.decrypt;
 const rawData = '5ome_rand0m_m3ss4g3';

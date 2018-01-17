@@ -1,7 +1,7 @@
 // @ts-check
 
 /** Import project dependencies */
-import * as crypto from 'crypto';
+import crypto from 'crypto';
 
 /** Setting up */
 const IV_LENGTH = 16; /** For AES, this is always 16 */
