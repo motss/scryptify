@@ -4,9 +4,6 @@
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "forceConsistentCasingInFileNames": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
     "removeComments": true,
     "traceResolution": false,
     "newLine": "LF",
@@ -16,17 +13,21 @@
       "esnext.asynciterable"
     ],
     "moduleResolution": "node",
-    "module": "esnext",
+    "module": "commonjs",
     "target": "esnext",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "jsx": "react",
     "jsxFactory": "h",
-    "rootDir": "src",
+    "rootDir": ".",
     "outDir": ".",
     "declaration": true,
     "declarationDir": "."
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "types/*.d.ts"
   ],
   "exclude": [
     "node_modules"

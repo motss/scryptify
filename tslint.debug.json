@@ -12,13 +12,13 @@
       "statements",
       "members"
     ],
-    "no-console": true,
+    "no-console": false,
     "import-name": false,
     "interface-name": [
       true,
       "never-prefix"
     ],
-    "no-debugger": true,
+    "no-debugger": false,
     "no-duplicate-imports": false,
     "no-object-literal-type-assertion": false,
     "ordered-imports": [

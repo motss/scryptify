@@ -1,7 +1,11 @@
 // @ts-check
 
 /** Import project dependencies */
-import crypto from 'crypto';
+import {
+  createCipheriv,
+  createDecipheriv,
+  randomBytes,
+} from 'crypto';
 
 /** Setting up */
 const IV_LENGTH = 16; /** For AES, this is always 16 */
@@ -20,8 +24,8 @@ export function encryptSync(
     throw new Error('Invalid length of secret. Must be 256 bytes or 32 characters long');
   }
 
-  const iv = crypto.randomBytes(IV_LENGTH);
-  const cipher = crypto.createCipheriv('aes-256-cbc', Buffer.from(secret), iv);
+  const iv = randomBytes(IV_LENGTH);
+  const cipher = createCipheriv('aes-256-cbc', Buffer.from(secret), iv);
   const cipherInitial = cipher.update(Buffer.from(text));
   const encrypted = Buffer.concat([cipherInitial, cipher.final()]);
 
@@ -43,7 +47,11 @@ export function decryptSync(
   }
 
   const [iv, encrypted] = text.split(':');
-  const decipher = crypto.createDecipheriv('aes-256-cbc', Buffer.from(secret), Buffer.from(iv, 'hex'));
+  const decipher = createDecipheriv(
+    'aes-256-cbc',
+    Buffer.from(secret),
+    Buffer.from(iv, 'hex')
+  );
   const decipherInitial = decipher.update(Buffer.from(encrypted, 'hex'));
   const decrypted = Buffer.concat([decipherInitial, decipher.final()]);
 

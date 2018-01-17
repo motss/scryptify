@@ -23,7 +23,10 @@ const rawData = '5ome_rand0m_m3ss4g3';
 
 test('encryption works', async (t) => {
   try {
-    t.true(/^([a-z0-9]+)\:(?:[a-z0-9]+)$/i.test(await encrypt(rawData, secret)), 'Encryption works');
+    t.true(
+      /^([a-z0-9]+)\:(?:[a-z0-9]+)$/i.test(await encrypt(rawData, secret)),
+      'Encryption works'
+    );
   } catch (e) {
     t.fail(e);
   }
