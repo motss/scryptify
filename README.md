@@ -1,3 +1,5 @@
+🚨 No longer maintained. Moved to [@reallyland/node_mod](https://github.com/reallyland/node_mod). 🚨
+
 <div align="center" style="text-align: center;">
   <h1 style="border-bottom: none;">scryptify</h1>
 
@@ -25,18 +27,19 @@
 
 ## Table of contents
 
-- [Pre-requisite](#pre-requisite)
-- [How to use](#how-to-use)
-  - [Install](#install)
-  - [Usage](#usage)
-    - [Node.js](#nodejs)
-    - [Native ES modules or TypeScript](#native-es-modules-or-typescript)
-- [API Reference](#api-reference)
+- [Table of contents](#Table-of-contents)
+- [Pre-requisite](#Pre-requisite)
+- [How to use](#How-to-use)
+  - [Install](#Install)
+  - [Usage](#Usage)
+    - [Node.js](#Nodejs)
+    - [Native ES modules or TypeScript](#Native-ES-modules-or-TypeScript)
+- [API Reference](#API-Reference)
   - [encrypt(text, secret)](#encrypttext-secret)
-  - [encryptSync(text, secret)](#encryptsynctext-secret)
+  - [encryptSync(text, secret)](#encryptSynctext-secret)
   - [decrypt(text, secret)](#decrypttext-secret)
-  - [decryptSync(text, secret)](#decryptsynctext-secret)
-- [License](#license)
+  - [decryptSync(text, secret)](#decryptSynctext-secret)
+- [License](#License)
 
 ## Pre-requisite
 
